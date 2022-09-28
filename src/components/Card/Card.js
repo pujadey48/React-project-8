@@ -24,7 +24,7 @@ const Card = (props) => {
                 <p className="card-text ">{description}</p>
                 <p className="card-text ">Age: {age}</p>
                 <p className="card-text ">Time: {time}</p>
-                <a href="#" className="btn btn-primary" onClick={()=> handleAddToActivity(activity)}>Add to activities</a>
+                <a href="#/" className="btn btn-primary" onClick={()=> handleAddToActivity(activity)}>Add to activities</a>
             </div>
         </div>
     );

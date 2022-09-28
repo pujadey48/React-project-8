@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const RightPanel = () => {
+const RightPanel = (props) => {
+
+    const [breakTime, setBreakTime] = useState([]);
+
+    const handleBreakTimeClick = (time) => {
+        console.log("handleBreakTimeClick", time);
+        localStorage.setItem("breakTime", time);
+        setBreakTime(time);
+      };
+
+      useEffect(() => {
+        const time = localStorage.getItem("breakTime");
+        if (time){
+            setBreakTime(time);
+        } else {
+            setBreakTime("0");
+        }
+      }, []);
+
   return (
     <div className="container">
       <div className="d-flex mt-5 mb-5">
@@ -27,23 +45,23 @@ const RightPanel = () => {
       <h3 className="mt-5 mb-5">Add A Break</h3>
 
       <div className="d-flex justify-content-around border border-0 rounded-3 bg-light p-2 ">
-        <p className="bg-white text-dark border rounded-circle mt-3 p-1">
+        <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("10")}>
           {" "}
           10m
         </p>
-        <p className="bg-white text-dark border rounded-circle mt-3 p-1">
+        <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("15")}>
           {" "}
           15m
         </p>
-        <p className="bg-white text-dark border rounded-circle mt-3 p-1">
+        <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("20")}>
           {" "}
           20m
         </p>
-        <p className="bg-white text-dark border rounded-circle mt-3 p-1">
+        <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("25")}>
           {" "}
           25m
         </p>
-        <p className="bg-white text-dark border rounded-circle mt-3 p-1">
+        <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("30")}>
           {" "}
           30m
         </p>
@@ -53,12 +71,12 @@ const RightPanel = () => {
 
       <div className="d-flex justify-content-around border border-0 rounded-3 bg-light px-6 py-3 mb-2">
         <h5>Activity time</h5>
-        <h5 className="text-muted">120m</h5>
+        <h5 className="text-muted">{props.activityTime}m</h5>
       </div>
 
       <div className="d-flex justify-content-around border border-0 rounded-3 bg-light px-6 py-3 mb-5">
         <h5>Break time</h5>
-        <h5 className="text-muted">10m</h5>
+        <h5 className="text-muted">{breakTime}m</h5>
       </div>
 
       <a href="#" className="btn btn-primary w-100">
