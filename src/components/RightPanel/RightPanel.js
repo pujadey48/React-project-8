@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const RightPanel = (props) => {
 
     const [breakTime, setBreakTime] = useState([]);
@@ -18,6 +23,12 @@ const RightPanel = (props) => {
             setBreakTime("0");
         }
       }, []);
+
+      const showToastMessage = () => {
+        toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
 
   return (
     <div className="">
@@ -79,9 +90,10 @@ const RightPanel = (props) => {
         <h5 className="text-muted">{breakTime}m</h5>
       </div>
 
-      <a href="#" className="btn btn-primary w-100">
+      <a href="#" className="btn btn-primary w-100" onClick={showToastMessage}>
         Activity Completed
       </a>
+      <ToastContainer />
     </div>
   );
 };
