@@ -20,20 +20,20 @@ const RightPanel = (props) => {
       }, []);
 
   return (
-    <div className="container">
+    <div className="">
       <div className="d-flex mt-5 mb-5">
         <img src="favicon.ico" />
         <h3 className="p-2">Puja dey</h3>
       </div>
 
-      <div className="d-flex justify-content-around border border-0 rounded-3 bg-light mt-4 ">
+      <div className="d-flex justify-content-around border border-0 rounded-3 bg-light mt-4 flex-wrap">
         <div className="mt-2">
           <h6>59kg</h6>
           <p>Weight</p>
         </div>
 
         <div className="mt-2">
-          <h6>6.5</h6>
+          <h6>5.2</h6>
           <p>Height</p>
         </div>
 
@@ -44,7 +44,7 @@ const RightPanel = (props) => {
       </div>
       <h3 className="mt-5 mb-5">Add A Break</h3>
 
-      <div className="d-flex justify-content-around border border-0 rounded-3 bg-light p-2 ">
+      <div className="d-flex justify-content-around border border-0 rounded-3 bg-light p-2 flex-wrap">
         <p className="bg-white text-dark border rounded-circle mt-3 p-1" onClick={()=> handleBreakTimeClick("10")}>
           {" "}
           10m

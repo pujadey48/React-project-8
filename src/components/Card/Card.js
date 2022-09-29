@@ -18,7 +18,7 @@ const Card = (props) => {
         // </div>
 
         <div className="card">
-            <img src={img} className="img-fluid w-100 h-50 p-2" alt="..."/>
+            <img src={img} className="img-fluid w-100 h-50 p-2 " alt="..."/>
             <div className="card-body">
                 <h5 className="card-title ">{name}</h5>
                 <p className="card-text ">{description}</p>

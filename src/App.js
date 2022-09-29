@@ -25,11 +25,11 @@ function App() {
   return (
     <div className="container">
       <div className="row ">
-        <div className="col-9 bg-light row-cols-md-1">
+        <div className="col-md-9 bg-light ">
           <Header></Header>
           <Cards handleAddToActivity={handleAddToActivity}></Cards>
         </div>
-        <div className="col-3 row-cols-md-1">
+        <div className="col-md-3 ">
           <RightPanel activityTime={activityTime}></RightPanel>
         </div>
       </div>
