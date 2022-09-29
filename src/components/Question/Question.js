@@ -39,12 +39,20 @@ const Question = () => {
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingThree">
                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      What is CSS Box Model?
+                    What are the use cases of useEffect hook except API data load?
                     </button>
                   </h2>
                   <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        <p className="text-muted small">The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model. Box-Model has multiple properties in CSS.</p>
+                        <p className="text-muted small">
+                        <ul>
+                            <li>Running once on mount: fetch API data.</li>
+                            <li>Running on state change: validating input field.</li>
+                            <li>Running on state change: live filtering.</li>
+                            <li>Running on state change: trigger animation on new array value.</li>
+                            <li>Running on props change: update paragraph list on fetched API data update.</li>
+                        </ul>     
+                        </p>
                     </div>
                   </div>
                 </div>
