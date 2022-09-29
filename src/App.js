@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Cards from "./components/Cards/Cards";
 import RightPanel from "./components/RightPanel/RightPanel";
+import Question from "./components/Question/Question";
 
 function App() {
   const [activityTime, setActivityTime] = useState([]);
@@ -23,15 +24,16 @@ function App() {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-9 bg-light">
+      <div className="row ">
+        <div className="col-9 bg-light row-cols-md-1">
           <Header></Header>
           <Cards handleAddToActivity={handleAddToActivity}></Cards>
         </div>
-        <div className="col-3">
+        <div className="col-3 row-cols-md-1">
           <RightPanel activityTime={activityTime}></RightPanel>
         </div>
       </div>
+      <Question></Question>
     </div>
   );
 }

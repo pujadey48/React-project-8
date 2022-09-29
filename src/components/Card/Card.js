@@ -5,7 +5,7 @@ const Card = (props) => {
 
     console.log(props);
 
-    const {id, name, age, time, img, description} = activity;
+    const {name, age, time, img, description} = activity;
 
     return (
         // <div className="card" style="width: 18rem;">
